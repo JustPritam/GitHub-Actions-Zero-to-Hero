@@ -25,6 +25,33 @@ In conclusion, Jenkins is better suited for complex and large-scale automation t
 
 - Each job runs in a GitHub-hosted runner (like Ubuntu, Windows, etc.).
 
+## How to add secrets?
+
+If you want to use secrets in GitHub Actions, like API keys, passwords, or tokens, here's exactly how to do it step by step:
+
+🔐 **Step 1**: Add Secrets in GitHub
+- Go to your GitHub repository.
+- Click on Settings → Secrets and variables → Actions.
+- Click New repository secret.
+- Enter:
+  Name: MY_SECRET_TOKEN
+  Value: super-secret-value
+- Now the secret is securely stored — GitHub encrypts it.
+
+⚙️ **Step 2**: Use the Secret in Workflow
+- In your .github/workflows/ci.yml file, reference it like this:
+```
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Print secret (for demo only - don’t do this in real workflows)
+        run: echo "${{ secrets.MY_SECRET_TOKEN }}"
+```
+**🔥** Never print secrets in real workflows — this is just to show how it's accessed.
+
 ### NOTE: A sample yml file is stored in this repo in the .github/workflows/ where there is explanation of the YML file.
 
 
