@@ -1,12 +1,12 @@
 name: My First GitHub Actions
-#  a display name for your workflow. It shows up in the GitHub Actions tab
+# a display name for your workflow. It shows up in the GitHub Actions tab
 
 on: [push]
 # the workflow runs every time code is pushed to any branch in the repository
 
 jobs:
   build:
-  #  starts a job named build. Each job is a collection of steps that run in a separate runner (virtual machine).
+  # starts a job named build. Each job is a collection of steps that run in a separate runner (virtual machine).
     runs-on: ubuntu-latest
     # the job runs on the latest version of Ubuntu provided by GitHub-hosted runners
 
@@ -17,7 +17,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    #  pulls the code from your GitHub repository into the runner, so it can be used in the next steps
+    # pulls the code from your GitHub repository into the runner, so it can be used in the next steps
+    # @v2 part specifies the version of the GitHub Action you're using — just like a version tag in a Docker image or Python package.
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
