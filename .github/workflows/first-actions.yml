@@ -7,8 +7,9 @@ on: [push]
 jobs:
   build:
   # starts a job named build. Each job is a collection of steps that run in a separate runner (virtual machine).
-    runs-on: ubuntu-latest
+    # runs-on: ubuntu-latest
     # the job runs on the latest version of Ubuntu provided by GitHub-hosted runners
+    runs-on: self-hosted
 
     strategy:
       matrix:
