@@ -46,7 +46,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
       - name: Print secret (for demo only - don’t do this in real workflows)
         run: echo "${{ secrets.MY_SECRET_TOKEN }}"
 ```
