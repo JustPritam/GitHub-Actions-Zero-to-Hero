@@ -17,4 +17,14 @@ Repository to kick start your journey with GitHub Actions
 
 In conclusion, Jenkins is better suited for complex and large-scale automation tasks, while GitHub Actions is a more cost-effective and user-friendly solution for simple to moderate automation needs.
 
+## How to create this pipeline?
+
+- GitHub automatically detects YAML files in .github/workflows/. (This location has to be created manually)
+
+- Based on the triggers (on:), it runs the defined jobs.
+
+- Each job runs in a GitHub-hosted runner (like Ubuntu, Windows, etc.).
+
+### NOTE: A sample yml file is stored in this repo in the .github/workflows/ where there is explanation of the YML file.
+
 
