@@ -21,7 +21,7 @@ jobs:
     # pulls the code from your GitHub repository into the runner, so it can be used in the next steps
     # @v2 part specifies the version of the GitHub Action you're using — just like a version tag in a Docker image or Python package.
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
         python-version: ${{ matrix.python-version }}
       #  installs the correct Python version (3.8 or 3.9) on the VM. ${{ matrix.python-version }} refers to the versions in the matrix above  
