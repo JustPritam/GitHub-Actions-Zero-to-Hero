@@ -19,7 +19,7 @@ In conclusion, Jenkins is better suited for complex and large-scale automation t
 
 ## How to create this pipeline?
 
-- GitHub automatically detects YAML files in .github/workflows/. (This location has to be created manually)
+- GitHub automatically detects YAML files in .github/workflows/ (This location has to be created manually).
 
 - Based on the triggers (on:), it runs the defined jobs.
 
